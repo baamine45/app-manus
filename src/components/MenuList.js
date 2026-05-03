@@ -3,9 +3,8 @@ import MenuItemCard from './MenuItemCard';
 
 const CATEGORIES = ['Tous', 'Entrée', 'Plat principal', 'Dessert', 'Boisson', 'Autre'];
 
-function MenuList({ items, onDelete, onToggleAvailable, filter, onFilterChange }) {
-  const filtered =
-    filter === 'Tous' ? items : items.filter((i) => i.category === filter);
+function MenuList({ items, onDelete, onToggleAvailable, onEdit, filter, onFilterChange, isAdmin }) {
+  const filtered = filter === 'Tous' ? items : items.filter((i) => i.category === filter);
 
   return (
     <section className="menu-list-section">
@@ -37,6 +36,8 @@ function MenuList({ items, onDelete, onToggleAvailable, filter, onFilterChange }
               item={item}
               onDelete={onDelete}
               onToggleAvailable={onToggleAvailable}
+              onEdit={onEdit}
+              isAdmin={isAdmin}
             />
           ))}
         </div>
