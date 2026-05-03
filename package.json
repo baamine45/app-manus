@@ -1,7 +1,12 @@
 {
   "name": "app-menus",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Application MERN de gestion de menus de restaurant",
   "private": true,
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
@@ -16,7 +21,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "cd server && node server.js",
+    "server:dev": "cd server && npx nodemon server.js",
+    "install:server": "cd server && npm install",
+    "postinstall": "npm run install:server",
+    "build:full": "npm run build && npm run install:server",
+    "azure:start": "cd server && node server.js"
   },
   "eslintConfig": {
     "extends": [
@@ -24,6 +35,7 @@
       "react-app/jest"
     ]
   },
+  "proxy": "http://localhost:5000",
   "browserslist": {
     "production": [
       ">0.2%",
