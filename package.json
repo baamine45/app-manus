@@ -12,6 +12,12 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^13.5.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^8.4.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "react-scripts": "5.0.1",
@@ -22,12 +28,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "cd server && node server.js",
-    "server:dev": "cd server && npx nodemon server.js",
-    "install:server": "cd server && npm install",
-    "postinstall": "npm run install:server",
-    "build:render": "npm run build && npm run install:server",
-    "start:render": "cd server && node server.js"
+    "start:server": "node server/server.js",
+    "build:render": "npm run build"
   },
   "eslintConfig": {
     "extends": [
