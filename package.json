@@ -26,8 +26,8 @@
     "server:dev": "cd server && npx nodemon server.js",
     "install:server": "cd server && npm install",
     "postinstall": "npm run install:server",
-    "build:full": "npm run build && npm run install:server",
-    "azure:start": "cd server && node server.js"
+    "build:render": "npm run build && npm run install:server",
+    "start:render": "node server/server.js"
   },
   "eslintConfig": {
     "extends": [
