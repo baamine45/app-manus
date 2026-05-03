@@ -27,7 +27,7 @@
     "install:server": "cd server && npm install",
     "postinstall": "npm run install:server",
     "build:render": "npm run build && npm run install:server",
-    "start:render": "node server/server.js"
+    "start:render": "cd server && node server.js"
   },
   "eslintConfig": {
     "extends": [
